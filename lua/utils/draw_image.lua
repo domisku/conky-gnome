@@ -1,0 +1,12 @@
+function draw_image(cr,img, x, y, width, height)
+    local image = cairo_image_surface_create_from_png(img)
+    local img_width = cairo_image_surface_get_width(image)
+    local img_height = cairo_image_surface_get_height(image)
+    cairo_save(cr)
+    cairo_translate(cr, x, y)
+    cairo_scale(cr, width / img_width, height / img_height)
+    cairo_set_source_surface(cr, image, 0, 0)
+    cairo_paint(cr)
+    cairo_restore(cr)
+    cairo_surface_destroy(image)
+end

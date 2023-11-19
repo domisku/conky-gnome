@@ -1,0 +1,26 @@
+conky.config =
+{
+  minimum_height = 85,
+  minimum_width = 85,
+  background=false,
+  own_window=true,
+  own_window_type="desktop",
+  own_window_class="Conky",
+  own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+  alignment="top_right",
+  gap_x=25,
+  gap_y=50,
+  use_xft=true,
+  xftalpha=1,
+  update_interval=2,
+  uppercase=false,
+  double_buffer=true,
+  own_window_argb_visual=true,
+  own_window_argb_value=1,
+  draw_shades=true,
+  default_color="ffffff",
+  lua_load="~/conky/lua/cpu.lua",
+  lua_draw_hook_post="main"
+}
+conky.text = [[
+]]
